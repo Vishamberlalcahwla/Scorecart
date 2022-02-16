@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "6e3d857d-4558-4d7e-a167-3201d12813ed",
+		"name": "BackendAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "v.se@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "confirm_password",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 0979b3cf475b08809e53a48b7521c168ec9ff093",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "API",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Scorecart api",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "2022-12-01",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "High",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 0979b3cf475b08809e53a48b7521c168ec9ff093",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/complete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 0979b3cf475b08809e53a48b7521c168ec9ff093",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "API Completed",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Scorecart api",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "2022-12-01",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "High",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/update/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"update",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 0979b3cf475b08809e53a48b7521c168ec9ff093",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/delete/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"delete",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Todo List",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "detail",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
